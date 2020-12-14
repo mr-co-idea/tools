@@ -1,5 +1,5 @@
 // function openCursor(callBack) {
-// 	const openRequest = indexedDB.open('Store', 7);
+// 	const openRequest = indexedDB.open('theStore', 1);
 // 	openRequest.onsuccess = function () {
 // 		const db = openRequest.result;
 // 		const transaction = db.transaction('bookMarks', 'readonly');
@@ -36,7 +36,7 @@ function popSort(arr, key) {
 
 function init() {
 	const contain = document.getElementById('bookMarks');
-	const openRequest = indexedDB.open('Store', 7);
+	const openRequest = indexedDB.open('theStore', 1);
 	openRequest.onsuccess = function () {
 		const db = openRequest.result;
 		const searchBox = document.getElementById('searchBox');
