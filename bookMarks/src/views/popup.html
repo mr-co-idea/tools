@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>书签</title>
+	<style>
+		.contain {
+			width: 400px;
+			min-height: 300px;
+		}
+
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		header input {
+			height: 30px;
+		}
+
+		.title {
+			cursor: pointer
+		}
+
+		ul>li {
+			position: relative;
+			cursor: pointer;
+		}
+
+		ul>li:hover {
+			color: blue;
+		}
+
+		ul>li>div:first-child {
+			position: relative;
+			top: 5px;
+			display: inline-block;
+			width: calc(100% - 80px);
+			height: 20px;
+			margin-left: 20px;
+			line-height: 20px;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			cursor: pointer;
+		}
+
+		ul>li>div:first-child:hover {
+			color: blue;
+		}
+
+		ul>li>div:last-child {
+			display: inline-block;
+			width: 30px;
+			height: 20px;
+			margin-left: 20px;
+			line-height: 20px;
+			color: red;
+		}
+	</style>
+</head>
+
+<body class="contain">
+	<header>
+		<h3 class="title" id="clear">书签</h3>
+		<div>
+			<input id="searchBox" type="text" placeholder="查询书签">
+			<button id="search">搜</button>
+		</div>
+	</header>
+	<main>
+		<section>
+			<ul id="bookMarks"></ul>
+		</section>
+	</main>
+	<script src="popup.js"></script>
+</body>
+
+</html>
